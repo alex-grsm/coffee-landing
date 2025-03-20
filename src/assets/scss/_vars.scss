@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Saira:wght@100..900&display=swap");
+
+:root {
+    // --font-family: sans;
+
+    --index: calc(1vw + 1vh);
+    // --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(166, 80%, 40%);
+    --first-color-alt: hsl(166, 78%, 38%);
+    --title-color: hsl(166, 95%, 15%);
+    --text-color: hsl(166, 12%, 40%);
+    --white-color: hsl(166, 100%, 99%);
+    --dark-color: hsl(166, 95%, 12%);
+    --body-color: hsl(166, 56%, 18%);
+    --body-white-color: hsl(0, 0%, 100%);
+    --body-first-color: hsl(166, 80%, 40%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Montserrat", serif;
+    --second-font: "Saira", serif;
+    --biggest-font-size: 4.5rem;
+    --big-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 9.5rem;
+        --big-font-size: 4rem;
+        --h1-font-size: 2rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
