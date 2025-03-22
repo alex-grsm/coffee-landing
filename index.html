@@ -20,7 +20,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li>
-                        <a href="#home" class="nav__link active-scroll-link">Home</a>
+                        <a href="#home" class="nav__link">Home</a>
                     </li>
                     <li>
                         <a href="#popular" class="nav__link">POPULAR</a>
@@ -84,34 +84,303 @@
 
         <!--==================== POPULAR ====================-->
         <section class="popular section" id="popular">
+            <div class="popular__container container">
+                <h2 class="section__title">POPULAR <br> CREATIONS</h2>
 
+                <div class="popular__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="popular__card swiper-slide">
+                            <div class="popular__images">
+                                <div class="popular__shape"></div>
+                                <img src="/src/assets/img/bean-img.png" alt="Coffee Beans" class="popular__bean-1">
+                                <img src="/src/assets/img/bean-img.png" alt="Coffee Beans" class="popular__bean-2">
+                                <img src="/src/assets/img/popular-coffee-1.png" alt="Vanilla Latte"
+                                    class="popular__coffee">
+                            </div>
+                            <div class="popular__data">
+                                <h2 class="popular__name">VANILLA LATTE</h2>
+                                <p class="popular__description">
+                                    A smooth and creamy blend of espresso, steamed milk, and real vanilla, topped with a
+                                    velvety foam. Perfect for those who love a touch of sweetness.
+                                </p>
+                                <a href="#contact" class="button button-dark">Order now: $21.50</a>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <div class="popular__images">
+                                <div class="popular__shape"></div>
+                                <img src="/src/assets/img/bean-img.png" alt="Coffee Beans" class="popular__bean-1">
+                                <img src="/src/assets/img/bean-img.png" alt="Coffee Beans" class="popular__bean-2">
+                                <img src="/src/assets/img/popular-coffee-2.png" alt="Classic Coffee"
+                                    class="popular__coffee">
+                            </div>
+                            <div class="popular__data">
+                                <h2 class="popular__name">CLASSIC COFFEE</h2>
+                                <p class="popular__description">
+                                    A bold and aromatic brew made from freshly ground coffee beans. Pure, rich flavor to
+                                    awaken your senses and keep you energized.
+                                </p>
+                                <a href="#contact" class="button button-dark">Order now: $18.90</a>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <div class="popular__images">
+                                <div class="popular__shape"></div>
+                                <img src="/src/assets/img/bean-img.png" alt="Coffee Beans" class="popular__bean-1">
+                                <img src="/src/assets/img/bean-img.png" alt="Coffee Beans" class="popular__bean-2">
+                                <img src="/src/assets/img/popular-coffee-3.png" alt="Mocha Coffee"
+                                    class="popular__coffee">
+                            </div>
+                            <div class="popular__data">
+                                <h2 class="popular__name">MOCHA COFFEE</h2>
+                                <p class="popular__description">
+                                    A rich and indulgent fusion of espresso, chocolate, and frothy milk. A delightful
+                                    treat for coffee and chocolate lovers alike.
+                                </p>
+                                <a href="#contact" class="button button-dark">Order now: $22.00</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--==================== ABOUT ====================-->
         <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title about__title">LEARN MORE <br> ABOUT US</h2>
+                    <p class="about__description">
+                        Welcome to StarCoffee, where coffee is pure passion.
+                        From bean to cup, we are dedicated to delivering
+                        excellence in every sip. Join us on a journey of
+                        flavor and quality, crafted with love to create the
+                        ultimate coffee experience.
+                    </p>
 
+                    <a href="#popular" class="button">The Best Coffees</a>
+                </div>
+
+                <div class="about__images">
+                    <div class="about__shape"></div>
+                    <img src="/src/assets/img/leaf-img.png" alt="Alt" class="about__leaf-1">
+                    <img src="/src/assets/img/leaf-img.png" alt="Alt" class="about__leaf-2">
+                    <img src="/src/assets/img/about-coffee.png" alt="Alt" class="about__coffee">
+                </div>
+            </div>
         </section>
 
         <!--==================== PRODUCTS ====================-->
         <section class="products section" id="products">
+            <h2 class="section__title">THE MOST <br> REQUESTED</h2>
 
+            <div class="products__container container grid">
+                <article class="products__card">
+                    <div class="products__images">
+                        <div class="products__shape"></div>
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-1">
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-2">
+                        <img src="/src/assets/img/products-coffee-1.png" alt="Alt" class="products__coffee">
+                    </div>
+
+                    <div class="products__data">
+                        <h3 class="products__name">ICED COFFEE MOCHA</h3>
+                        <span class="products__price">$15.90</span>
+                        <button class="products__button">
+                            <i class="ri-shopping-bag-3-fill"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="products__card">
+                    <div class="products__images">
+                        <div class="products__shape"></div>
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-1">
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-2">
+                        <img src="/src/assets/img/products-coffee-2.png" alt="Alt" class="products__coffee">
+                    </div>
+
+                    <div class="products__data">
+                        <h3 class="products__name">COFFEE WITH CREAM</h3>
+                        <span class="products__price">$11.90</span>
+                        <button class="products__button">
+                            <i class="ri-shopping-bag-3-fill"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="products__card">
+                    <div class="products__images">
+                        <div class="products__shape"></div>
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-1">
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-2">
+                        <img src="/src/assets/img/products-coffee-3.png" alt="Alt" class="products__coffee">
+                    </div>
+
+                    <div class="products__data">
+                        <h3 class="products__name">CAPPUCCINO COFFEE</h3>
+                        <span class="products__price">$19.90</span>
+                        <button class="products__button">
+                            <i class="ri-shopping-bag-3-fill"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="products__card">
+                    <div class="products__images">
+                        <div class="products__shape"></div>
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-1">
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-2">
+                        <img src="/src/assets/img/products-coffee-4.png" alt="Alt" class="products__coffee">
+                    </div>
+
+                    <div class="products__data">
+                        <h3 class="products__name">COFFEE WITH MILK</h3>
+                        <span class="products__price">$9.90</span>
+                        <button class="products__button">
+                            <i class="ri-shopping-bag-3-fill"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="products__card">
+                    <div class="products__images">
+                        <div class="products__shape"></div>
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-1">
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-2">
+                        <img src="/src/assets/img/products-coffee-5.png" alt="Alt" class="products__coffee">
+                    </div>
+
+                    <div class="products__data">
+                        <h3 class="products__name">CLASSIC ICED COFFEE</h3>
+                        <span class="products__price">$5.90</span>
+                        <button class="products__button">
+                            <i class="ri-shopping-bag-3-fill"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="products__card">
+                    <div class="products__images">
+                        <div class="products__shape"></div>
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-1">
+                        <img src="/src/assets/img/ice-img.png" alt="Alt" class="products__ice-2">
+                        <img src="/src/assets/img/products-coffee-6.png" alt="Alt" class="products__coffee">
+                    </div>
+
+                    <div class="products__data">
+                        <h3 class="products__name">ICED COFFEE FRAPPE</h3>
+                        <span class="products__price">$16.90</span>
+                        <button class="products__button">
+                            <i class="ri-shopping-bag-3-fill"></i>
+                        </button>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <!--==================== CONTACT ====================-->
         <section class="contact section" id="contact">
+            <h2 class="section__title">CONTACT US</h2>
+            <div class="contact__container container grid">
+                <div class="contact__info grid">
+                    <div>
+                        <h3 class="contact__title">Write Us</h3>
+                        <div class="contact__social">
+                            <a href="https://wa.me/qr/6ZALJQBGX3Z4A1" target="_blank" class="contact__social-link">
+                                <i class="ri-whatsapp-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/alexey_grsm" target="_blank"
+                                class="contact__social-link">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://t.me/ejukk" target="_blank" class="contact__social-link">
+                                <i class="ri-telegram-2-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="contact__title">Location</h3>
+                        <address class="contact__address">
+                            Lima - Sun City - Peru <br>
+                            Av. Moon #4321
+                        </address>
 
+                        <a href="https://maps.app.goo.gl/Z7Saf1Pj9fTjHyfA7" target="_blank" class="contact__map">
+                            <i class="ri-map-pin-fill"></i>
+                            <span>View On Map</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact__info grid">
+                    <div>
+                        <h3 class="contact__title">Delivery</h3>
+                        <address class="contact__address">
+                            +00-987-7654-321 <br>
+                            +11-012345
+                        </address>
+                    </div>
+                    <div>
+                        <h3 class="contact__title">Attention</h3>
+                        <address class="contact__address">
+                            Monday - Saturday <br> 9AM - 10PM
+                        </address>
+                    </div>
+                </div>
+
+                <div class="contact__images">
+                    <div class="contact__shape"></div>
+                    <img src="/src/assets/img/contact-delivery.png" alt="Alt" class="contact__delivery">
+                </div>
+            </div>
         </section>
     </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer">
+        <div class="footer__container container grid">
+            <div>
+                <h3 class="footer__title">Social</h3>
+                <div class="footer__social">
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-circle-fill"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-x-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3 class="footer__title">Payment Methods</h3>
+                <div class="footer__pay">
+                    <img src="/src/assets/img/footer-card-1.png" alt="Alt" class="footer__pay-card">
+                    <img src="/src/assets/img/footer-card-2.png" alt="Alt" class="footer__pay-card">
+                    <img src="/src/assets/img/footer-card-3.png" alt="Alt" class="footer__pay-card">
+                    <img src="/src/assets/img/footer-card-4.png" alt="Alt" class="footer__pay-card">
+                </div>
+            </div>
+            <div>
+                <h3 class="footer__title">Subscribe For Discounts</h3>
+                <form action="" class="footer__form">
+                    <input type="email" placeholder="Email" class="footer__input">
+                    <button type="submit" class="footer__button button">Subscribe</button>
+                </form>
+            </div>
+        </div>
 
+        <span class="footer__copy">&#169; All Rights Reserved</span>
     </footer>
 
     <!--========== SCROLL UP ==========-->
-    <!-- <a href="#home" class="scrollup" id="scroll-up">
+    <a href="#home" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-line"></i>
-    </a> -->
+    </a>
 
     <script type="module" src="/src/assets/js/main.js"></script>
 </body>
