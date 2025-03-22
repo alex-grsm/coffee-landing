@@ -4,6 +4,7 @@ import scrollHeader from './components/scroll-header';
 import swiperPopular from './components/swiper-popular';
 import scrollUp from './components/scroll-up';
 import scrollActiveLink from './components/scroll-active-link';
+import customCursor from './components/custom-cursor';
 
 menu();
 scrollHeader();
@@ -11,6 +12,7 @@ scrollUp();
 scrollActiveLink();
 
 swiperPopular();
+customCursor();
 
 const ej = new ScrollEjuk({
     origin: 'top',

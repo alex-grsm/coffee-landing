@@ -22,7 +22,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li>
-                        <a href="#home" class="nav__link">Home</a>
+                        <a href="#home" class="nav__link">HOME</a>
                     </li>
                     <li>
                         <a href="#popular" class="nav__link">POPULAR</a>
@@ -383,6 +383,105 @@
     <a href="#home" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-line"></i>
     </a>
+
+    <div class="ice-cube-cursor">
+        <svg viewBox="0 0 512 512" width="100%" height="100%">
+            <defs>
+                <!-- Радиальный градиент для основного цвета льда -->
+                <radialgradient id="iceGradient" cx="40%" cy="30%" r="70%" fx="30%" fy="30%">
+                    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+                    <stop offset="40%" stop-color="#A0D8FF" stop-opacity="0.8" />
+                    <stop offset="70%" stop-color="#64B5F6" stop-opacity="0.9" />
+                    <stop offset="100%" stop-color="#2196F3" stop-opacity="0.95" />
+                </radialgradient>
+                
+                <!-- Градиент для наведения (более яркий) -->
+                <radialgradient id="iceGradientHover" cx="40%" cy="30%" r="70%" fx="30%" fy="30%">
+                    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+                    <stop offset="40%" stop-color="#B3E5FC" stop-opacity="0.85" />
+                    <stop offset="70%" stop-color="#81D4FA" stop-opacity="0.95" />
+                    <stop offset="100%" stop-color="#29B6F6" stop-opacity="1" />
+                </radialgradient>
+                
+                <!-- Линейный градиент для граней -->
+                <lineargradient id="edgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1565C0" stop-opacity="0.7" />
+                    <stop offset="100%" stop-color="#0D47A1" stop-opacity="0.5" />
+                </lineargradient>
+                
+                <!-- Фильтр для свечения -->
+                <filter id="iceGlow" x="-30%" y="-30%" width="160%" height="160%">
+                    <fegaussianblur stdDeviation="10" result="blur" />
+                    <fecomposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+                
+                <!-- Фильтр для тени -->
+                <filter id="iceShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <fegaussianblur in="SourceAlpha" stdDeviation="6" result="blur" />
+                    <fecolormatrix in="blur" type="matrix" values="0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0.3 0 0 0 0.5 0" result="blueShadow" />
+                    <feblend in="SourceGraphic" in2="blueShadow" mode="normal" />
+                </filter>
+                
+                <!-- Фильтр для внутренних отражений -->
+                <filter id="innerReflection" x="-10%" y="-10%" width="120%" height="120%">
+                    <feturbulence type="fractalNoise" baseFrequency="0.08" numOctaves="1" seed="1" result="noise" />
+                    <fedisplacementmap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+                </filter>
+            </defs>
+            
+            <!-- Основная форма кубика льда -->
+            <path d="M238.406 26.844c-9.653.12-18.926 2.69-30.437 7.062l-157.282 57c-20.984 7.65-21.587 11.834-22.344 33.28L20.937 358.22c-1.207 27.514-.654 33.187 23.25 43.56L229.97 483.19c19.34 8.29 31.906 7.655 45.186 3.218l181.938-56.53c21.95-7.295 25.04-9.627 25.875-36.845l7.686-250.155c.662-17.37-5.667-24.695-18.78-29.625L271.062 34.375c-12.977-5.344-23.003-7.653-32.657-7.53z" 
+                  fill="url(#iceGradient)" 
+                  filter="url(#iceShadow)" />
+            
+            <!-- Внутренние отражения -->
+            <path d="M238.406 26.844c-9.653.12-18.926 2.69-30.437 7.062l-157.282 57c-20.984 7.65-21.587 11.834-22.344 33.28L20.937 358.22c-1.207 27.514-.654 33.187 23.25 43.56L229.97 483.19c19.34 8.29 31.906 7.655 45.186 3.218l181.938-56.53c21.95-7.295 25.04-9.627 25.875-36.845l7.686-250.155c.662-17.37-5.667-24.695-18.78-29.625L271.062 34.375c-12.977-5.344-23.003-7.653-32.657-7.53z" 
+                  fill="url(#iceGradient)" 
+                  opacity="0.3"
+                  filter="url(#innerReflection)" />
+            
+            <!-- Передняя грань -->
+            <path d="M44.25 134c10.372-.29 29.217 7.2 63.906 22.656 140.925 62.786 140.52 65.876 130.97 200.656-7.783 109.81-8.797 109.85-128.47 59.282-73.15-30.91-86.806-40.853-85.187-88.97l5.468-162.937c.674-20.034 1.557-30.358 13.312-30.687z"
+                  fill="url(#iceGradient)"
+                  opacity="0.7" />
+            
+            <!-- Правая грань -->
+            <path d="M441.188 164.906c29.172-.384 29.1 28.075 26.75 105.25-4.118 135.132-9.05 140.184-120.375 173.72-70.42 21.21-81.49 25.614-78.97-12.032l11-164.156c3.217-48.034 7.588-51.508 94.813-83.907 31.323-11.633 52.534-18.686 66.78-18.874z"
+                  fill="url(#iceGradient)"
+                  opacity="0.6" />
+                  
+            <!-- Верхняя грань -->
+            <path d="M239.219 51.719c23.637-.053 45.564 8.434 87.874 24.874 95.545 37.123 131.71 53.8 69.687 77.937-74.002 28.802-128.175 45.115-172.28 25.814L113.47 131.75c-34.57-15.127-44.69-27.46 17.843-50.094 55.64-20.14 82.742-29.882 107.906-29.937z"
+                  fill="url(#iceGradient)"
+                  opacity="0.8" />
+                  
+            <!-- Края верхней грани -->
+            <path d="M239.219 51.719c23.637-.053 45.564 8.434 87.874 24.874 95.545 37.123 131.71 53.8 69.687 77.937-74.002 28.802-128.175 45.115-172.28 25.814L113.47 131.75c-34.57-15.127-44.69-27.46 17.843-50.094 55.64-20.14 82.742-29.882 107.906-29.937z"
+                  stroke="url(#edgeGradient)"
+                  stroke-width="3"
+                  fill="none"
+                  opacity="0.7" />
+                  
+            <!-- Яркий блик (большой) -->
+            <ellipse cx="150" cy="120" rx="70" ry="40" 
+                     fill="white" 
+                     opacity="0.4" 
+                     transform="rotate(-15, 150, 120)" />
+            
+            <!-- Маленькие блики -->
+            <circle cx="320" cy="180" r="15" fill="white" opacity="0.5" />
+            <circle cx="180" cy="250" r="10" fill="white" opacity="0.4" />
+            <circle cx="270" cy="100" r="12" fill="white" opacity="0.35" />
+            
+            <!-- Эффект мелких трещин внутри льда -->
+            <g opacity="0.2" stroke="#A0D8FF" stroke-width="1">
+                <line x1="150" y1="200" x2="190" y2="230" />
+                <line x1="220" y1="150" x2="270" y2="170" />
+                <line x1="300" y1="250" x2="330" y2="290" />
+                <line x1="180" y1="300" x2="220" y2="320" />
+            </g>
+        </svg>
+    </div>
 
     <script type="module" src="/src/assets/js/main.js"></script>
 </body>

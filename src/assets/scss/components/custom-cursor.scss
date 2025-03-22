@@ -1,0 +1,121 @@
+/* Скрываем стандартные курсоры на всех элементах */
+* {
+    cursor: none !important;
+}
+
+/* Стили для кубика льда */
+.ice-cube-cursor {
+    z-index: 99999;
+    --ice-size: 50px;
+    position: fixed;
+    height: var(--ice-size);
+    width: var(--ice-size);
+    pointer-events: none;
+    will-change: transform;
+    top: calc(var(--ice-size) / 2 * -1);
+    left: calc(var(--ice-size) / 2 * -1);
+    filter: drop-shadow(0 0 5px rgba(135, 206, 250, 0.5));
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Дополнительный элемент для эффектов */
+.ice-cube-cursor::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(200, 230, 255, 0);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Эффекты при наведении на кликабельные элементы */
+.ice-cube-cursor.clickable {
+    --ice-size: 30px;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 15px rgba(100, 181, 246, 0.8));
+}
+
+/* Добавляем анимацию вращения при наведении */
+.ice-cube-cursor.clickable svg {
+    animation: ice-float 3s infinite ease-in-out;
+}
+
+/* Эффект свечения вокруг льда */
+.ice-cube-cursor.clickable::after {
+    transform: translate(-50%, -50%) scale(1);
+    background-color: rgba(200, 230, 255, 0.5);
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    animation: ice-pulse 2s infinite;
+}
+
+/* Эффект при клике */
+.ice-cube-cursor.clicking {
+    filter: drop-shadow(0 0 20px rgba(33, 150, 243, 0.9));
+}
+
+.ice-cube-cursor.clicking svg {
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
+}
+
+/* Анимация "плавания" для льда */
+@keyframes ice-float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Анимация пульсации свечения */
+@keyframes ice-pulse {
+    0% {
+        width: 15px;
+        height: 15px;
+        opacity: 0.7;
+        background-color: rgba(200, 230, 255, 0.5);
+    }
+    50% {
+        width: 40px;
+        height: 40px;
+        opacity: 0.3;
+        background-color: rgba(33, 150, 243, 0.3);
+    }
+    100% {
+        width: 15px;
+        height: 15px;
+        opacity: 0.7;
+        background-color: rgba(200, 230, 255, 0.5);
+    }
+}
+
+/* Медиа-запрос для скрытия курсора на мобильных устройствах */
+@media (hover: none), (max-width: 768px), (pointer: coarse) {
+    /* Возвращаем стандартные курсоры на мобильных устройствах */
+    * {
+        cursor: auto !important;
+    }
+    
+    /* Скрываем сам элемент кастомного курсора */
+    .ice-cube-cursor {
+        display: none !important;
+    }
+}
+
+/* Скрываем стандартные курсоры только на десктопах */
+@media (hover: hover) and (pointer: fine) {
+    * {
+        cursor: none !important;
+    }
+}
