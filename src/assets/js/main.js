@@ -17,12 +17,16 @@ const ej = new ScrollEjuk({
     distance: '60px',
     duration: 2000,
     delay: 300,
+    observerOptions: { 
+        rootMargin: '10px',
+        threshold: 0.1
+    }
 });
 
 ej.reveal(`.popular__swiper, .footer__container, .footer__copy`);
 
 ej.reveal(`.home__shape`, { origin: 'bottom' });
-ej.reveal(`.home__coffee`, { delay: 1000, disstance: '200px', duration: 1500 });
+ej.reveal(`.home__coffee`, { delay: 1000, distance: '200px', duration: 1500 });
 ej.reveal(`.home__splash`, { delay: 1600, scale: '0', duration: 1500 });
 ej.reveal(`.home__bean-1, .home__bean-2`, { delay: 2200, scale: '0', duration: 1500, rotate: { z: 180 } });
 ej.reveal(`.home__ice-1, .home__ice-2`, { delay: 2600, scale: '0', duration: 1500, rotate: { z: 180 } });
